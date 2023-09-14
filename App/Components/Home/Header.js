@@ -6,7 +6,7 @@ import {
   StyleSheet,
   Dimensions,
 } from "react-native";
-import Colors from "../../Colors";
+import Colors from "../../Shared/Colors";
 
 export default function Headre() {
   return (
