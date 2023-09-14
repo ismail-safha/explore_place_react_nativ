@@ -11,3 +11,5 @@
 4. Add user Location om map
 
 5. Custom App Google Font
+
+6. Google Marker on MAP
