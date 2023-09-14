@@ -5,10 +5,17 @@ import { StyleSheet, Text, View } from "react-native";
 import * as Location from "expo-location";
 import TabNavigation from "./App/Navigations/TabNavigation";
 import { UserLocationContext } from "./App/Context/UserLocationContext";
+import { useFonts } from "expo-font";
 
 export default function App() {
   const [location, setLocation] = useState(null);
   const [errorMsg, setErrorMsg] = useState(null);
+
+  const [fontsLoaded] = useFonts({
+    "raleway-Regular": require("./assets/Fonts/Raleway-Regular.ttf"),
+    "raleway-SemiBold": require("./assets/Fonts/Raleway-SemiBold.ttf"),
+  });
+
   useEffect(() => {
     (async () => {
       let { status } = await Location.requestForegroundPermissionsAsync();

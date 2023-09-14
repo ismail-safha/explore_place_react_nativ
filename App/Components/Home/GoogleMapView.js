@@ -19,6 +19,16 @@ export default function GoogleMapView() {
 
   return (
     <View style={{ marginTop: 20 }}>
+      <Text
+        style={{
+          fontSize: 20,
+          marginBottom: 10,
+          fontWeight: "600",
+          fontFamily: "raleway-SemiBold",
+        }}
+      >
+        Top Near By Places
+      </Text>
       <MapView
         style={{
           width: Dimensions.get("screen").width * 0.9,
