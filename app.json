@@ -18,14 +18,25 @@
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff",
-        "googleServicesFile": "./google-services.json",
-        "package": "com.tubeguruji.findplace"
+        "backgroundColor": "#ffffff"
       },
-      "googleMapsApiKey": "AIzaSyDpG0MbEAjIue5TzdoxwBcnYv7cABNYXJU"
+      "config": {
+        "googleMap": {
+          "apiKey": "AIzaSyDpG0MbEAjIue5TzdoxwBcnYv7cABNYXJU"
+        }
+      },
+      "package": "com.tubeguruji.findplace"
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "plugins": [
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Allow $(PRODUCT_NAME) to use your location."
+        }
+      ]
+    ]
   }
 }

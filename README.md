@@ -7,3 +7,5 @@
 3. Google MAP api Key
 
 - Integrate Google Map
+
+4. Add user Location om map

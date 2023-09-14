@@ -1,14 +1,22 @@
-import { useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { View, Text, Dimensions } from "react-native";
 import MapView, { PROVIDER_GOOGLE } from "react-native-maps";
+import { UserLocationContext } from "../../Context/UserLocationContext";
 
 export default function GoogleMapView() {
-  const [mapRegion, setmapRegion] = useState({
-    latitude: 37.78825,
-    longitude: -122.4324,
-    latitudeDelta: 0.0422,
-    longitudeDelta: 0.0421,
-  });
+  const [mapRegion, setmapRegion] = useState([]);
+  const { location, setLocation } = useContext(UserLocationContext);
+  useEffect(() => {
+    if (location) {
+      setmapRegion({
+        latitude: location.coords.latitude,
+        longitude: location.coords.longitude,
+        latitudeDelta: 0.0122,
+        longitudeDelta: 0.0421,
+      });
+    }
+  }, []);
+
   return (
     <View style={{ marginTop: 20 }}>
       <MapView
@@ -19,6 +27,7 @@ export default function GoogleMapView() {
         }}
         provider={PROVIDER_GOOGLE}
         showsUserLocation={true}
+        region={mapRegion}
       ></MapView>
     </View>
   );
