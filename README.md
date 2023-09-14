@@ -15,3 +15,5 @@
 6. Google Marker on MAP
 
 7. Category List
+
+8. google Place Api Call
