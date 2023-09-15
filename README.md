@@ -17,3 +17,5 @@
 7. Category List
 
 8. google Place Api Call
+
+9. Displace Place List
